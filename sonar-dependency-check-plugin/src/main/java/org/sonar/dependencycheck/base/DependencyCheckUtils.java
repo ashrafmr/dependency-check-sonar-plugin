@@ -60,13 +60,7 @@ public final class DependencyCheckUtils {
 
     public static Severity cvssToSonarQubeSeverity(Float cvssScore, Configuration config) {
         Float severityHigh = config.getFloat(DependencyCheckConstants.SEVERITY_HIGH).orElse(DependencyCheckConstants.SEVERITY_HIGH_DEFAULT);
-        if (severityHigh < 0) {
-            severityHigh = DependencyCheckConstants.SEVERITY_HIGH_DEFAULT;
-        }
         Float severityMedium = config.getFloat(DependencyCheckConstants.SEVERITY_MEDIUM).orElse(DependencyCheckConstants.SEVERITY_MEDIUM_DEFAULT);
-        if (severityMedium < 0) {
-            severityMedium = DependencyCheckConstants.SEVERITY_MEDIUM_DEFAULT;
-        }
         return DependencyCheckUtils.cvssToSonarQubeSeverity(cvssScore, severityHigh, severityMedium);
     }
 
