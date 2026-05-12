@@ -53,6 +53,9 @@ public final class DependencyCheckUtils {
             return Severity.HIGH;
         } else if (medium != null && medium >= 0 && cvssScore >= medium) {
             return Severity.MEDIUM;
+        } else if (high != null && high < 0) {
+            // User set -1 to avoid build failure: Map to INFO for visibility without risk
+            return Severity.INFO;
         } else {
             return Severity.LOW;
         }
