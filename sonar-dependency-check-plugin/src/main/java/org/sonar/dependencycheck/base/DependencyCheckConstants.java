@@ -45,7 +45,7 @@ public final class DependencyCheckConstants {
     public static final Boolean SECURITY_HOTSPOT_DEFAULT = Boolean.FALSE;
     public static final Boolean USE_FILEPATH_DEFAULT = Boolean.FALSE;
 
-    public static final String REPOSITORY_KEY = "OWASP";
+    public static final String REPOSITORY_KEY = "dependencycheck";
     public static final String LANGUAGE_KEY = "neutral";
     public static final String RULE_KEY = "UsingComponentWithKnownVulnerability";
     public static final String RULE_KEY_WITH_SECURITY_HOTSPOT = "UsingComponentWithKnownVulnerabilitySecurityHotspot";
