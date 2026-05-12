@@ -50,7 +50,7 @@ public class KnownCveRuleDefinition implements RulesDefinition {
     private void fillOWASPRule(NewRule rule) {
         rule.addTags("cwe-937", "cwe", "cve", "owasp-a6", "owasp-a9", "owasp-2017-a9", "owasp-2021-a6", "security", "vulnerability");
         rule.setName("Using Components with Known Vulnerabilities");
-        rule.addDefaultImpact(SoftwareQuality.SECURITY, Severity.MEDIUM);
+        rule.addDefaultImpact(SoftwareQuality.SECURITY, Severity.HIGH);
         rule.setStatus(RuleStatus.READY);
         rule.addOwaspTop10(OwaspTop10Version.Y2017, OwaspTop10.A9);
         rule.addOwaspTop10(OwaspTop10Version.Y2021, OwaspTop10.A6);

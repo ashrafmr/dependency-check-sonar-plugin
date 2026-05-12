@@ -8,6 +8,7 @@
     -   Added new tags: `owasp-a6`, `owasp-2021-a6`, and `owasp-2017-a9` to ensure issues appear in both legacy and modern security reports.
     -   Updated rule HTML description to explicitly reference OWASP Top 10 2021 (A6) and 2017 (A9).
     -   Reinforced explicit mapping to **CWE-937**.
+    -   **Added logic to handle negative severity thresholds (e.g., -1)** in SonarQube settings, which previously caused issues to default to "Low" impact and disappear from security reports.
 -   **misc** - Confirmed JRE runtime requirement of **Java 21** for compatibility with SonarQube v2026.2.
 
 ## [1.2.6](https://github.com/dependency-check/dependency-check-sonar-plugin/tree/1.2.6) (2019-10-09)
