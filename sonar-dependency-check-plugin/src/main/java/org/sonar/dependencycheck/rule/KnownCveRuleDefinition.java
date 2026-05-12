@@ -39,7 +39,7 @@ public class KnownCveRuleDefinition implements RulesDefinition {
     public void define(Context context) {
         NewRepository repo = context.createRepository(DependencyCheckConstants.REPOSITORY_KEY,
                 DependencyCheckConstants.LANGUAGE_KEY);
-        repo.setName("Dependency-Check");
+        repo.setName("OWASP");
 
         NewRule rule = repo.createRule(DependencyCheckConstants.RULE_KEY);
         fillOWASPRule(rule);
@@ -52,9 +52,9 @@ public class KnownCveRuleDefinition implements RulesDefinition {
     }
 
     private void fillOWASPRule(NewRule rule) {
-        rule.addTags("cwe-937", "cwe-1035", "cwe", "cve", "owasp-a6", "owasp-a9", "owasp-2017-a9", "owasp-2021-a6", "security", "vulnerability");
+        rule.addTags("cwe-937", "cwe-1035", "cwe", "cve", "owasp-2017-a9", "owasp-2021-a6", "security", "vulnerability");
         rule.setName("Vulnerable and Outdated Components");
-        rule.setCleanCodeAttribute(CleanCodeAttribute.TRUSTWORTHY);
+        rule.setCleanCodeAttribute(CleanCodeAttribute.COMPLETE);
         rule.addDefaultImpact(SoftwareQuality.SECURITY, Severity.MEDIUM);
         rule.setStatus(RuleStatus.READY);
         
