@@ -1,5 +1,15 @@
 # Change Log
 
+## [6.0.1](https://github.com/dependency-check/dependency-check-sonar-plugin/tree/6.0.1) (2026-05-12)
+
+-   **fix** - Restore OWASP categorization for SonarQube v2026.2.
+    -   SonarQube v11.1+ (v2026.2) changed how security reports are generated, moving from legacy tags to strictly defined security standards.
+    -   The category "Using Components with Known Vulnerabilities" shifted from **A9 (2017)** to **A6 (2021)**.
+    -   Added new tags: `owasp-a6`, `owasp-2021-a6`, and `owasp-2017-a9` to ensure issues appear in both legacy and modern security reports.
+    -   Updated rule HTML description to explicitly reference OWASP Top 10 2021 (A6) and 2017 (A9).
+    -   Reinforced explicit mapping to **CWE-937**.
+-   **misc** - Confirmed JRE runtime requirement of **Java 21** for compatibility with SonarQube v2026.2.
+
 ## [1.2.6](https://github.com/dependency-check/dependency-check-sonar-plugin/tree/1.2.6) (2019-10-09)
 [All Commits](https://github.com/dependency-check/dependency-check-sonar-plugin/compare/1.2.5...1.2.6)
 
