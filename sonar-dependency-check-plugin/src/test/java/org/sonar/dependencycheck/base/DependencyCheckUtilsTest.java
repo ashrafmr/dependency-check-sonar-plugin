@@ -82,16 +82,16 @@ class DependencyCheckUtilsTest {
                 {Float.valueOf("10.0"), Float.valueOf("-1"), Float.valueOf("5.0"), Severity.MEDIUM},
                 {Float.valueOf("7.0"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.MEDIUM},
                 {Float.valueOf("5.0"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.MEDIUM},
-                {Float.valueOf("4.9"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.LOW},
-                {Float.valueOf("4.0"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.LOW},
-                {Float.valueOf("0.0"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.LOW},
+                {Float.valueOf("4.9"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.INFO},
+                {Float.valueOf("4.0"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.INFO},
+                {Float.valueOf("0.0"),  Float.valueOf("-1"), Float.valueOf("5.0"), Severity.INFO},
 
                 // custom, high and medium deactivated
-                {Float.valueOf("10.0"), Float.valueOf("-1"), Float.valueOf("-1"), Severity.LOW},
-                {Float.valueOf("7.0"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.LOW},
-                {Float.valueOf("5.0"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.LOW},
-                {Float.valueOf("1.9"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.LOW},
-                {Float.valueOf("0.0"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.LOW},
+                {Float.valueOf("10.0"), Float.valueOf("-1"), Float.valueOf("-1"), Severity.INFO},
+                {Float.valueOf("7.0"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.INFO},
+                {Float.valueOf("5.0"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.INFO},
+                {Float.valueOf("1.9"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.INFO},
+                {Float.valueOf("0.0"),  Float.valueOf("-1"), Float.valueOf("-1"), Severity.INFO},
 
                 // all vulnerabilities are HIGH, medium is deactivated
                 {Float.valueOf("10.0"), Float.valueOf("0.0"), Float.valueOf("-1"), Severity.HIGH},
