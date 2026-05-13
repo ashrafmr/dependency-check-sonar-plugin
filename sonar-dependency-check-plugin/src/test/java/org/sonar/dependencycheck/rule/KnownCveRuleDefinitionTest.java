@@ -52,7 +52,7 @@ class KnownCveRuleDefinitionTest {
 
         InOrder inOrder = Mockito.inOrder(context, repo);
 
-        inOrder.verify(context).createRepository("dependencycheck","neutral");
+        inOrder.verify(context).createRepository("owasp","neutral");
         inOrder.verify(repo).createRule(DependencyCheckConstants.RULE_KEY);
         inOrder.verify(repo).createRule(DependencyCheckConstants.RULE_KEY_WITH_SECURITY_HOTSPOT);
 
